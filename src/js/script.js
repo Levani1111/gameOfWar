@@ -53,6 +53,7 @@ class Deck {
     return this.cards.pop();
   }
 
+
   shuffle() {
     for (let i = 0; i <= 51; i++) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -63,3 +64,16 @@ class Deck {
     return this.cards;
   }
 }
+
+// player class buiid
+
+
+class Player {
+  constructor(name) {
+    this.wins = 0;
+    this.card = "";
+    this.name = name;
+  }
+}
+
+
