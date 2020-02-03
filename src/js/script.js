@@ -129,7 +129,11 @@ class Game {
       return player1.wins > player2.wins ? player1.name : player2.name;
     }
   }
+
+
 }
+console.log('hello here')
+
 //constitute the game
 const game = new Game();
 game.playGame();
