@@ -98,9 +98,9 @@ function war(){
 // define flipping cards
 
 function flipCard() {
-  cardsInPlay1.push(player1[0]);
+  cardsSet1.push(player1[0]);
   player1.shift();
-  cardsInPlay2.push(player2[0]);
+  cardsSet2.push(player2[0]);
   player2.shift();
 }
 
@@ -109,7 +109,7 @@ function flipCard() {
 function playGame() {
   flipCard();
   console.log(
-    `Player 1 flipped the ${cardsInPlay1[0].rank} of ${cardsInPlay1[0].suit}. Player 2 flipped the ${cardsInPlay2[0].rank} of ${cardsInPlay2[0].suit}.`
+    `Player 1 flipped the ${cardsSet1[0].rank} of ${cardsSet1[0].suit}. Player 2 flipped the ${cardsSet2[0].rank} of ${cardsSet2[0].suit}.`
   );
   compare();
   declareWinner();
