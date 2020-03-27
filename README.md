@@ -1,22 +1,14 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
-
 # Game of War
+This is a javascript version of the classic card game war.  It is played in the consule of your browser.  In real war there are a no winners.  However, in this game the value of the card determines who wins.
 
-Remember the card game ["War"](https://bicyclecards.com/how-to-play/war/)?
+A deck of cards is dealt to players and each player flips over a card.  The play with the highest value collects both cards.
 
-Two players start the game by splitting a deck of 52 standard playing cards
-evenly. Each stack is facedown, and players cannot look at the cards in their
-stack or rearrange them.
+If the card are the same value, then war is declared.  During war more cards are laid down and the play with highest value wins all of the cards.
 
-The objective of the game is to play until one player has all 52 cards in their
-stack.
+## Developed
+This game was developed using
+- javascript
+- html
 
-## Information
-
-Game plays in console
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+## Author
+Levani Papashvili developed this game in 2020
