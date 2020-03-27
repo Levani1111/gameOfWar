@@ -87,11 +87,32 @@ function compare() {
     console.log("I declare war against you! DIE DIE DIE!!!");
   }
 }
+//comparing during war
+function compareWar() {
+  if (cardsSet1[0].value > cardsSet2[0].value) {
+    player1.push(...cardsSet1, ...cardsSet2);
+    cardsSet1 = [];
+    cardsSet2 = [];
+    console.log(
+      `Player 1 wins this war! Player 1 has ${player1.length} cards! Player 2 has ${player2.length} cards!`
+    );
+  } else if (cardsSet1[0].value < cardsSet2[0].value) {
+    player2.push(...cardsSet2, ...cardsSet1);
+    cardsSet1 = [];
+    cardsSet2 = [];
+    console.log(
+      `Player 2 wins this war! Player 2 has ${player2.length} cards! Player 1 has ${player1.length} cards!`
+    );
+  } else {
+    war();
+    console.log("I declare war!");
+  }
+}
 // define the war function
 
 function war(){
-    cardsInPlay1.unshift(...player1.splice(0,4));
-    cardsInPlay2.unshift(...player2.splice(0,4));
+    cardsSet1.unshift(...player1.splice(0,4));
+    cardsSet2.unshift(...player2.splice(0,4));
     compareWar();
 };
 
