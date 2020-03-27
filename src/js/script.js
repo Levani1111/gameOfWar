@@ -8,7 +8,7 @@ let player2 = [];
 let cardsSet1 = [];
 let cardsSet2 = [];
 
-
+//defining a card
 class Card {
   constructor(suit, rank, value) {
     this.suit = suit;
@@ -16,11 +16,12 @@ class Card {
     this.value = value;
   }
 };
-
+// Building a deck
 class Deck {
   constructor() {
     this.cards = [];
   }
+  //Cards with English and Georgian Names
   addCards() {
     let suits = [
       "hearts - guli",
