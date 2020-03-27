@@ -1,13 +1,21 @@
 // Building a class for cards using a constructor
 // Will add new values to this once I create a deck
 // making georgian language parts
+let player1 = [];
+let player2 = [];
+let cardsSet1 = [];
+let cardsSet2 = [];
+
+
 class Card {
-  constructor(value, suit) {
-    this.suits = ["Spades / kvavi", "Hearts/ guli", "Diamonds/ aguri", "Clubs/ jvari"];
-    this.values = [null,null,"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"];
-    this.value = value;
+  constructor(suit, rank, value) {
     this.suit = suit;
+    this.rank = rank;
+    this.value = value;
   }
+};
+
+
 
   lessThan(card2) {
     if (this.value < card2.value) {
@@ -81,7 +89,7 @@ class Player {
 
 class Game {
   constructor() {
-    let name1 = prompt("What is Player 1's Name?");
+    let name1 = prompt("What is Player 1's Name?"); //display a prompt box wich ask user fro name and output a message
     let name2 = prompt("What is Player 2's Name?");
     this.deck = new Deck();
     this.player1 = new Player(name1);
@@ -112,6 +120,7 @@ class Game {
         this.player1.wins++;
         this.wins(this.player1.name);
       } 
+
 // insert WAR else if statement to address ties
       else {
         this.player2.wins++;
