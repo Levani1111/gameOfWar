@@ -70,4 +70,5 @@ function compare(){
         player1.push(cardsInPlay1[0], cardsInPlay2[0]);
         cardsInPlay1 = [];
         cardsInPlay2 = [];
+        cardsInPlay3 = [];
         console.log(`Player 1 wins this round! Player 1 has ${player1.length} cards! Player 2 has ${player2.length} cards!`)
