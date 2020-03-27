@@ -64,4 +64,10 @@ mainDeck.addCards();
 mainDeck.shuffle();
 // deal the cards
 mainDeck.deal();
-
+// game works to compare cards
+function compare(){
+    if(cardsInPlay1[0].score > cardsInPlay2[0].score){
+        player1.push(cardsInPlay1[0], cardsInPlay2[0]);
+        cardsInPlay1 = [];
+        cardsInPlay2 = [];
+        console.log(`Player 1 wins this round! Player 1 has ${player1.length} cards! Player 2 has ${player2.length} cards!`)
