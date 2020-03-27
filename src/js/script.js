@@ -15,35 +15,33 @@ class Card {
   }
 };
 
-
-
-  lessThan(card2) {
-    if (this.value < card2.value) {
-      return true;
-    } else if (this.value === card2.value) {
-      return this.suit < card2.suit;
-    }
-    return false;
-  }
-
-  greaterThan(card2) {
-    if (this.value > card2.value) {
-      return true;
-    } else if (this.value === card2.value) {
-      return this.suit > card2.suit;
-    }
-    return false;
-  }
-
-  print() {
-    return this.values[this.value] + " of " + this.suits[this.suit];
-  }
-}
-//Building a deck class
-
 class Deck {
   constructor() {
     this.cards = [];
+  }
+  addCards(){
+    let suits = ['hearts - guli', 'diamond - aguri', 'clubs - yvavi', 'spade - jvari'];
+    let ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"];
+       let scores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+       for(let i=0; i<suits.length; i++){
+           for(let j=0; j<ranks.length; j++){
+               this.cards.push(new Card(suits[i], ranks[j], scores[j]))
+           }
+       }
+    }
+    shuffle() {
+    //found oniline
+      for(let i=this.cards.length - 1; i > 0; i-=1){ 
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = this.cards[i];
+        this.cards[i] = this.cards[j];
+        this.cards[j] = temp
+      }  
+      return this.cards;
+  }
+    
+    }
+  
     for (let i = 2; i <= 14; i++) {
       for (let j = 0; j <= 3; j++) {
         let card = new Card(i, j);
