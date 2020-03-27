@@ -1,14 +1,29 @@
 # Game of War
-This is a javascript version of the classic card game war.  It is played in the consule of your browser.  In real war there are a no winners.  However, in this game the value of the card determines who wins.
 
-A deck of cards is dealt to players and each player flips over a card.  The play with the highest value collects both cards.
+This is a javascript version of the classic card game war.  The game creates a deck, deals it and plays the full game including wars.   It plays out in the terminal
 
-If the card are the same value, then war is declared.  During war more cards are laid down and the play with highest value wins all of the cards.
+## Getting Started
 
-## Developed
-This game was developed using
-- javascript
-- html
+To play game, open the index.html file and watch the game play in your terminal
 
-## Author
-Levani Papashvili developed this game in 2020
+### Prerequisites
+
+Web browser
+
+## Built With
+
+* Javascript
+* HTML
+
+
+## Authors
+
+* **Levani Papashvili** - (https://github.com/Levani1111)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Thanks to my family and friends for being supportive
