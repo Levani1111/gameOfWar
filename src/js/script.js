@@ -112,7 +112,23 @@ function playGame() {
     `Player 1 flipped the ${cardsInPlay1[0].rank} of ${cardsInPlay1[0].suit}. Player 2 flipped the ${cardsInPlay2[0].rank} of ${cardsInPlay2[0].suit}.`
   );
   compare();
-  checkForWinner();
+  declareWinner();
+}
+//determine if there is a winner
+function declareWinner() {
+  if (player1.length === 52) {
+    player1 = [];
+    mainDeck.shuffle();
+    mainDeck.deal();
+    console.log("Congratulations Player 1!");
+  } else if (player2.length === 52) {
+    player2 = [];
+    mainDeck.shuffle();
+    mainDeck.deal();
+    console.log("Congratulations Player 2!");
+  } else {
+    playGame();
+  }
 }
 
-
+playGame();
