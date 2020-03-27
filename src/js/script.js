@@ -77,7 +77,7 @@ function compare() {
       `Player 1 wins this round! Player 1 has ${player1.length} cards! Player 2 has ${player2.length} cards!`
     );
   } else if (cardsSet1[0].value < cardsSet2[0].value) {
-    player2.push(...cardsSet2, ...cardsSet1);
+    player2.push(cardsSet2[0], cardsSet1[0]);
     cardsSet1 = [];
     cardsSet2 = [];
     console.log(
@@ -124,7 +124,7 @@ function flipCard() {
   player1.shift();
   cardsSet2.push(player2[0]);
   player2.shift();
-}
+  }
 
 // defining playing the game
 
