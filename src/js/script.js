@@ -103,3 +103,16 @@ function flipCard() {
   cardsInPlay2.push(player2[0]);
   player2.shift();
 }
+
+// defining playing the game
+
+function playGame() {
+  flipCard();
+  console.log(
+    `Player 1 flipped the ${cardsInPlay1[0].rank} of ${cardsInPlay1[0].suit}. Player 2 flipped the ${cardsInPlay2[0].rank} of ${cardsInPlay2[0].suit}.`
+  );
+  compare();
+  checkForWinner();
+}
+
+
